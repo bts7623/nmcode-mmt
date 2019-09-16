@@ -11,5 +11,5 @@ create momentom project with Vanilla JS
 - 짧은 영상이 많기 때문에 의미 있는 부분만 메모해둔다.
 
 # History
-## #0 Introduction : 기본 인트로
-## #1 Theory : 이론
+#### #0 Introduction : 기본 인트로
+#### #1 Theory : 이론
