@@ -21,5 +21,7 @@ create momentom project with Vanilla JS
     Visual Studio Code와 같이 Desktop App도 만들 수 있다.
 - #1.2
   - JS로 WEB, Player, Game 등 다양한 프로그램을 만들 수 있음
-  - JSthreejs.org / World Draw / 3DC
+  - JSthreejs.org / World Draw / 3DC / taotajima.jp / three.js / Impact Game / Socket.IO
+  - JS 대체언어가 없다.
+  - Web App, RealTime App, Simple App 등 다방면에 다채롭게 사용
     
