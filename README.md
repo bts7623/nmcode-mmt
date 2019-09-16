@@ -16,3 +16,6 @@ create momentom project with Vanilla JS
 # 
 #### #0 Introduction : 기본 인트로
 #### #1 Theory : 이론
+- #1.1
+  : 모든 컴퓨터에는 브라우저가 있고 브라우저는 JS로 되어 있어서 모든 브라우저는 JS가 기본적으로 깔려있다.
+    Visual Studio Code와 같이 Desktop App도 만들 수 있다.
