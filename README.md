@@ -30,4 +30,7 @@ create momentom project with Vanilla JS
   - VanillaJS는 그냥 JS라고 보면 되는건가?
   - 다른 모든 것들은 결구 JS의 기본 구문을 이쁘게 작성하게 만들고 컴파일해서 사용하는 것이다.
     - 따라서 가장 기본이 되는 것을 배워야 함
- 
+- #1.5
+  - repl.it (Ripple)
+    - 별도의 설치 없이 사용가능한 Code Editor, Visual Studio Code Editor 사용해도 무방
+    - 큰 프로젝트는 VSC, 컨셉 등을 보여줄 때는 Ripple로 진행
