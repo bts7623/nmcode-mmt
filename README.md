@@ -12,6 +12,7 @@ create momentom project with Vanilla JS
 
 # History
 #### 2019.09.16 : #0 ~ #1.2
+#### 2019.09.17 : #1.3 ~ #1.5
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -33,4 +34,6 @@ create momentom project with Vanilla JS
 - #1.5
   - repl.it (Ripple)
     - 별도의 설치 없이 사용가능한 Code Editor, Visual Studio Code Editor 사용해도 무방
-    - 큰 프로젝트는 VSC, 컨셉 등을 보여줄 때는 Ripple로 진행
+    - 큰 프로젝트는 VSC, 컨셉 등을 보여줄 때는 Ripp le로 진행
+  - <script> 구문은 <body> tag 가장 마지막 추가
+  - 모든 컴퓨터에는 JS가 깔려있다. 브라우져랑 함게 구성되어있다. → 그렇기에 강력한 언어다
