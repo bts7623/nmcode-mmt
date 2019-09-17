@@ -24,4 +24,10 @@ create momentom project with Vanilla JS
   - JSthreejs.org / World Draw / 3DC / taotajima.jp / three.js / Impact Game / Socket.IO
   - JS 대체언어가 없다.
   - Web App, RealTime App, Simple App 등 다방면에 다채롭게 사용
-    
+- #1.3
+  - ES5, ES6 등의 library별 버전이 있지만 아직 다루지 않을 것.
+- #1.4
+  - VanillaJS는 그냥 JS라고 보면 되는건가?
+  - 다른 모든 것들은 결구 JS의 기본 구문을 이쁘게 작성하게 만들고 컴파일해서 사용하는 것이다.
+    - 따라서 가장 기본이 되는 것을 배워야 함
+ 
