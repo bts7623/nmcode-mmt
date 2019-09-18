@@ -35,5 +35,12 @@ create momentom project with Vanilla JS
   - repl.it (Ripple)
     - 별도의 설치 없이 사용가능한 Code Editor, Visual Studio Code Editor 사용해도 무방
     - 큰 프로젝트는 VSC, 컨셉 등을 보여줄 때는 Ripp le로 진행
+    - JavaScript로 new repl 하면 NodeJS로 만들어짐. HTML, CSS, JS로 만들어야함
   - <script> 구문은 <body> tag 가장 마지막 추가
   - 모든 컴퓨터에는 JS가 깔려있다. 브라우져랑 함게 구성되어있다. → 그렇기에 강력한 언어다
+- #1.6
+  - Lines이 아닌 Expressions로 구분
+    + Expression은 수학적으로 어떠한 식, 꼴의 뜻으로 세미폴론(;)을 붙이는 코드 단위로 생각하면 될듯
+  - Variable(변수)은 Creaet, Initialize, Use(생성, 초기화, 사용) 한다. 
+  - Variable 생성 및 초기화 시 let??을 씀 왜지 → #1.7
+- #1.7
