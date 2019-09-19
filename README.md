@@ -13,6 +13,7 @@ create momentom project with Vanilla JS
 # History
 #### 2019.09.16 : #0 ~ #1.2
 #### 2019.09.17 : #1.3 ~ #1.5
+#### 2019.09.18 : #1.6
 
 # Concept
 #### #0 Introduction : 기본 인트로
