@@ -46,4 +46,8 @@ create momentom project with Vanilla JS
   - Variable 생성 및 초기화 시 let??을 씀 왜지 → #1.7
 - #1.7
   - const(constant: 상수), let, var
-  - var로 모든 것을 했었지만 지금은 let과 const
+  - var로 모든 것을 했었지만 지금은 let과 const가 생김
+  
+- #1.8
+  - String: 끈. 끝이 있는 것. text string
+  - Float: floating number 떠돌이 소숫점을 갖고 있는 숫자
