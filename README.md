@@ -45,3 +45,5 @@ create momentom project with Vanilla JS
   - Variable(변수)은 Creaet, Initialize, Use(생성, 초기화, 사용) 한다. 
   - Variable 생성 및 초기화 시 let??을 씀 왜지 → #1.7
 - #1.7
+  - const(constant: 상수), let, var
+  - var로 모든 것을 했었지만 지금은 let과 const
