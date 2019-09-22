@@ -115,7 +115,7 @@ create momentom project with Vanilla JS
 
 - #2.1.1
   - 백틱(`)
-    - String을 이쁘게 쓰기위해 고안된 token
-    ```Javascript
-      - console.log(`My Name Is `);
+    - String을 이쁘게 쓰기위해 고안된 token //String 구문 안에 변수를 그대로 쓸 수 있어 별도의 ',' '+' 'space'를 쓸 필요가 
+    ```javascript
+      - console.log(`My Name Is ${name}, Age Is ${age}`);
     ```
