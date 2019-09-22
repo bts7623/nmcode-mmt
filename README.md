@@ -60,6 +60,8 @@ create momentom project with Vanilla JS
   - Array
     - const daysOfWeek = []; 대괄호로 Array 선언
     - String, num, bool 여러 type의 데이터 넣어도 다 들어감
+    
+- #1.10
   - Object
     - const userInfo = {}; //Object는 중괄호로 선언
       - const userInfo = { //이런식으로 데이터 값을 넣어줌
@@ -87,7 +89,21 @@ create momentom project with Vanilla JS
               grade: "B+"
             }]
         };
-        
+      - console.log(userInfo.myGrade[1].grade); //이런 식으로 타고타고 데이터를 불러올 수 있음  
   - error
     - unexpected identifier : 뜻밖의 식별자
     - unexpected token , : 뜻밖의 , 
+    - JS error는 HTML, CSS에 문제를 일으키지 않음
+  
+- #2.1
+  - 내장함수(built-in function)
+    - alert, console.log와 같은 기존에 JS에 내장되어 있는 함수
+  - function 함수명(인자){함수내용}; //함수 선언
+    - 인자: argument //함수에 넣어줄 변수, arg1, arg2, arg3... 여러개 선언 가능
+    - 따로 type을 정해주진 않는듯. fuction sayHello(potato){console.log("Hello", potato)}
+      - 이 경우에 console.log입장에서는 arg1, arg2라고 볼 수 있음. 
+        function sayHello(potato, kimchi, oil){
+             console.log("Hello", potato, "My name is ", kimchi, ", age is ", oil);
+        }
+
+        sayHello("KYG", "BTS", 29) //Hello KYG My name is  BTS , age is  29
