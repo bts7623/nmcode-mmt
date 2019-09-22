@@ -95,6 +95,7 @@ create momentom project with Vanilla JS
   - error
     - unexpected identifier : 뜻밖의 식별자
     - unexpected token , : 뜻밖의 , 
+    - undefined : 정의되지 않음
     - JS error는 HTML, CSS에 문제를 일으키지 않음
   
 - #2.1
@@ -121,4 +122,20 @@ create momentom project with Vanilla JS
     - String을 이쁘게 쓰기위해 고안된 token //String 구문 안에 변수를 그대로 쓸 수 있어 별도의 ',' '+' 'space'를 쓸 필요가 
     ```javascript
       - console.log(`My Name Is ${name}, Age Is ${age}`);
+    ```
+  - return
+    ```javascript
+    const calculator = {
+      plus : function(a, b){
+        return a + b;
+      },
+      multi : function(a, b){
+        return a * b;
+      }
+    }
+    
+    const plus = calculator.plus(4, 2);
+    const multi = calculator.multi(4, 2);
+    
+    console.log(`plus: ${plus}, multi: ${multi}`);
     ```
