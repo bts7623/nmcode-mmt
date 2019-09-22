@@ -69,4 +69,21 @@ create momentom project with Vanilla JS
           isHandsome: true
         }
       - console.log(userInfo.age) //이런 식으로 원하는 값 가져옴
-      - userInfo.age = 40 //이렇게 Object 값 수정 가능. Setter 
+      - userInfo.age = 40 //이렇게 Object 값 수정 가능. Setter 와 같음
+    - Array와 Object 혼용 가능
+      - const userInfo = {
+          name: "BTS",
+          age: 29,
+          favoriteMusic: ["벚꽃엔딩", "흔들리는꽃들속에서","6 to 9"],
+          myGrade: [
+            {
+              subject: "반소자", 
+              grade: "F"
+            }, {
+              subject: "현사패", 
+              grade: "A0"
+            }, {
+              subject: "공학수학1", 
+              grade: "B+"
+            }]
+        };
