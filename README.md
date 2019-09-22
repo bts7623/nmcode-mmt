@@ -73,7 +73,8 @@ create momentom project with Vanilla JS
       - console.log(userInfo.age) //이런 식으로 원하는 값 가져옴
       - userInfo.age = 40 //이렇게 Object 값 수정 가능. Setter 와 같음
     - Array와 Object 혼용 가능
-      - const userInfo = {
+    ```javascript
+        const userInfo = {
           name: "BTS",
           age: 29,
           favoriteMusic: ["벚꽃엔딩", "흔들리는꽃들속에서","6 to 9"],
@@ -89,6 +90,7 @@ create momentom project with Vanilla JS
               grade: "B+"
             }]
         };
+    ```
       - console.log(userInfo.myGrade[1].grade); //이런 식으로 타고타고 데이터를 불러올 수 있음  
   - error
     - unexpected identifier : 뜻밖의 식별자
@@ -102,13 +104,14 @@ create momentom project with Vanilla JS
     - 인자: argument //함수에 넣어줄 변수, arg1, arg2, arg3... 여러개 선언 가능
     - 따로 type을 정해주진 않는듯. fuction sayHello(potato){console.log("Hello", potato)}
       - 이 경우에 console.log입장에서는 arg1, arg2라고 볼 수 있음. 
-      
+      ```javascript
       
         function sayHello(potato, kimchi, oil){
              console.log("Hello", potato, "My name is ", kimchi, ", age is ", oil);
         }
 
         sayHello("KYG", "BTS", 29) //Hello KYG My name is  BTS , age is  29
+      ```
   - ~~내가 알게된 새로운 것은 console.log()에서 ','로 구분해도 알아서 띄어쓰기가 되어 출력된다는 점.. 기존에는 '+'해줬었는데.~~
     - 이것도 ES6의 경우에서만 인듯?
   - ~~또한 JS 내 String도 큰 따옴표("")로 String을 쓴다는 것.~~ --> 큰따, 작따 상관 없음
