@@ -137,5 +137,5 @@ create momentom project with Vanilla JS
     const plus = calculator.plus(4, 2);
     const multi = calculator.multi(4, 2);
     
-    console.log(`plus: ${plus}, multi: ${multi}`);
+    console.log(`plus: ${plus}, multi: ${multi}`); //plus: 6, multi: 8
     ```
