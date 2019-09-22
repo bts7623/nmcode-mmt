@@ -58,7 +58,7 @@ create momentom project with Vanilla JS
   - camel case로 변수명 지정
     - 띄어 쓰기하는 부분을 대문자로 표현
   - Array
-    - const daysOfWeek = ["". "". "". ""]; 이런식으로 Array 선언
+    - const daysOfWeek = []; 대괄호로 Array 선언
     - String, num, bool 여러 type의 데이터 넣어도 다 들어감
   - Object
     - const userInfo = {}; //Object는 중괄호로 선언
@@ -87,3 +87,7 @@ create momentom project with Vanilla JS
               grade: "B+"
             }]
         };
+        
+  - error
+    - unexpected identifier : 뜻밖의 식별자
+    - unexpected token , : 뜻밖의 , 
