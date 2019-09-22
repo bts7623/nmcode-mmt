@@ -60,3 +60,13 @@ create momentom project with Vanilla JS
   - Array
     - const daysOfWeek = ["". "". "". ""]; 이런식으로 Array 선언
     - String, num, bool 여러 type의 데이터 넣어도 다 들어감
+  - Object
+    - const userInfo = {}; //Object는 중괄호로 선언
+      - const userInfo = { //이런식으로 데이터 값을 넣어줌
+          name: "BTS",
+          age: 29,
+          gender: "Male",
+          isHandsome: true
+        }
+      - console.log(userInfo.age) //이런 식으로 원하는 값 가져옴
+      - userInfo.age = 40 //이렇게 Object 값 수정 가능. Setter 
