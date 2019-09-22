@@ -111,6 +111,11 @@ create momentom project with Vanilla JS
         sayHello("KYG", "BTS", 29) //Hello KYG My name is  BTS , age is  29
   - ~~내가 알게된 새로운 것은 console.log()에서 ','로 구분해도 알아서 띄어쓰기가 되어 출력된다는 점.. 기존에는 '+'해줬었는데.~~
     - 이것도 ES6의 경우에서만 인듯?
-  - ~~또한 JS 내 String도 큰 따옴표("")로 String을 쓴다는 것.~~ --> 작은 따옴표가 맞음.
+  - ~~또한 JS 내 String도 큰 따옴표("")로 String을 쓴다는 것.~~ --> 큰따, 작따 상관 없음
 
 - #2.1.1
+  - 백틱(`)
+    - String을 이쁘게 쓰기위해 고안된 token
+    ```Javascript
+      - console.log(`My Name Is `);
+    ```
