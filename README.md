@@ -102,8 +102,12 @@ create momentom project with Vanilla JS
     - 인자: argument //함수에 넣어줄 변수, arg1, arg2, arg3... 여러개 선언 가능
     - 따로 type을 정해주진 않는듯. fuction sayHello(potato){console.log("Hello", potato)}
       - 이 경우에 console.log입장에서는 arg1, arg2라고 볼 수 있음. 
+      
+      
         function sayHello(potato, kimchi, oil){
              console.log("Hello", potato, "My name is ", kimchi, ", age is ", oil);
         }
 
         sayHello("KYG", "BTS", 29) //Hello KYG My name is  BTS , age is  29
+  - 내가 알게된 새로운 것은 console.log()에서 ','로 구분해도 알아서 띄어쓰기가 되어 출력된다는 점.. 기존에는 '+'해줬었는데.
+  - 또한 JS 내 String도 큰 따옴표("")로 String을 쓴다는 것.
