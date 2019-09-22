@@ -14,6 +14,8 @@ create momentom project with Vanilla JS
 #### 2019.09.16 : #0 ~ #1.2
 #### 2019.09.17 : #1.3 ~ #1.5
 #### 2019.09.18 : #1.6
+#### 2019.09.21 : #1.7 ~ #1.8
+#### 2019.09.22 : #1.9 ~ 
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -51,3 +53,10 @@ create momentom project with Vanilla JS
 - #1.8
   - String: 끈. 끝이 있는 것. text string
   - Float: floating number 떠돌이 소숫점을 갖고 있는 숫자
+
+- #1.9
+  - camel case로 변수명 지정
+    - 띄어 쓰기하는 부분을 대문자로 표현
+  - Array
+    - const daysOfWeek = ["". "". "". ""]; 이런식으로 Array 선언
+    - String, num, bool 여러 type의 데이터 넣어도 다 들어감
