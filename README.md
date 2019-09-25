@@ -16,6 +16,7 @@ create momentom project with Vanilla JS
 #### 2019.09.18 : #1.6
 #### 2019.09.21 : #1.7 ~ #1.8
 #### 2019.09.22 : #1.9 ~ #2.1.1
+#### 2019.09.25 : #2.2
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -139,3 +140,12 @@ create momentom project with Vanilla JS
     
     console.log(`plus: ${plus}, multi: ${multi}`); //plus: 6, multi: 8
     ```
+    
+- #2.2 
+  - CSS에서 id로 효과줄 때 #id{내용}으로 줌
+  - DOM: Document Object Module
+    + html tag를 가져가서 객체로 만듦
+  ```javascript
+  const title = document.getElementById("title"); // html 해당 id를 가진 태그의 데이터를 가져옴
+  title.innerHTML = "Hi! From JS"; // title이 id인 태그의 내용을 바꿈
+  ```
