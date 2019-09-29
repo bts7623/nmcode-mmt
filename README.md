@@ -17,6 +17,7 @@ create momentom project with Vanilla JS
 #### 2019.09.21 : #1.7 ~ #1.8
 #### 2019.09.22 : #1.9 ~ #2.1.1
 #### 2019.09.25 : #2.2
+#### 2019.09.30 : 
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -145,8 +146,22 @@ create momentom project with Vanilla JS
   - CSS에서 id로 효과줄 때 #id{내용}으로 줌
   - DOM: Document Object Module
     + html tag를 가져가서 객체로 만듦
-    + JS를 통해 HTML 태그의 모든 것을 DOM으로 만들 수 있다.
+    + JS를 통해 HTML 태그의 모든 것을 DOM객체로 만들 수 있다.
   ```javascript
   const title = document.getElementById("title"); // html 해당 id를 가진 태그의 데이터를 가져옴
   title.innerHTML = "Hi! From JS"; // title이 id인 태그의 내용을 바꿈
   ```
+  
+- #2.3
+  - console.dir(title);을 통해서 해당 Element로 할 수 있는 것들을 알 수 있다.
+    + 개발자모드 console에서 펼쳐보기
+    + console.dir(document);를 통해서 document의 이벤트 확인
+      + document.title = '어쩌구저쩌꾸' 등으로 모든 요소를 JS로 수정 가능
+    + console.dir를 통해 해당 객체가 어떤 스크립트 이벤트들이 적용되어 있는지 확인할 수 있는듯
+  - JS의 객체표기법으로 표기되어있고 해당 모든 이벤트값을 수정할 수 있음
+  - document.getElementById, ByClassName, ByTagName 등으로 찾을 수 있음
+    + .querySelector(""); 모든 자식들 중에 찾아라
+      + "#title" id가 title인 것
+      + ".title" class가 title인 것
+      + 해당 값이 없으면 null을 받아옴 = undefined 같은 것
+
