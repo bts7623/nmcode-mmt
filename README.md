@@ -17,7 +17,8 @@ create momentom project with Vanilla JS
 #### 2019.09.21 : #1.7 ~ #1.8
 #### 2019.09.22 : #1.9 ~ #2.1.1
 #### 2019.09.25 : #2.2
-#### 2019.09.30 : #2.3
+#### 2019.09.29 : #2.3
+#### 2019.09.30 : #2.4
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -175,4 +176,22 @@ create momentom project with Vanilla JS
       
       window.addEventListener("resize", handleResize); //윈도우 창 크기 변경 시 handlerResize 함수 작동
       // 이 때 handleResize가 아닌 handleResize());라고 괄호를 넣으면 윈도우 변경과 상관없이 즉시 함수가 작동함.중요
+  ```
+  - 해당 이벤트를 로그로 볼 수 있다.
+  ```javascript
+      function handleResize(event){ //윈도우창 변경 시 handleResize 함수가 작동하면서 해당 event를 console에 찍어줌
+        console.log(event);
+      }
+      
+      window.addEventListener("resize", handleResize);
+  ```
+  - title에 click 이벤트를 적용
+  ```javascript
+    const title = document.querySelector("#title");
+
+    function handleClick(){
+      title.style.color = "blue";
+    }
+
+    title.addEventListener("click", handleClick);
   ```
