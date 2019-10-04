@@ -202,5 +202,6 @@ create momentom project with Vanilla JS
   - 입력 받은 text를 변수로 넣어줄 수 있지만 지금은 거의 안씀
   ```javascript
       prompt("Ask somthing"); //text를 입력할 수 있는 팝업 발생
-  ```
+  ``` 
+  - 
   
