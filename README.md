@@ -19,6 +19,7 @@ create momentom project with Vanilla JS
 #### 2019.09.25 : #2.2
 #### 2019.09.29 : #2.3
 #### 2019.09.30 : #2.4
+#### 2019.10.04 : #2.5
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -195,3 +196,11 @@ create momentom project with Vanilla JS
 
     title.addEventListener("click", handleClick);
   ```
+
+- #2.5
+  - 아주 오래된 스크립트로 prompt가 있음. (현재는 거의 쓰지 않지만 작동은 함)
+  - 입력 받은 text를 변수로 넣어줄 수 있지만 지금은 거의 안씀
+  ```javascript
+      prompt("Ask somthing"); //text를 입력할 수 있는 팝업 발생
+  ```
+  
