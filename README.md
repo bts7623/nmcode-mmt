@@ -20,6 +20,7 @@ create momentom project with Vanilla JS
 #### 2019.09.29 : #2.3
 #### 2019.09.30 : #2.4
 #### 2019.10.04 : #2.5
+#### 2019.10.07 : 
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -205,3 +206,4 @@ create momentom project with Vanilla JS
   ``` 
   - 그냥 if, else, and, or
   
+- #2.6
