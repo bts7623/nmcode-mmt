@@ -211,6 +211,7 @@ create momentom project with Vanilla JS
   - 기본컬러를 정할 때 변수를 대문자와 언더바로 선언 const BASE_COLOR
   - init 함수를 통해 해당 페이지를 초기화함
   - addEventListener를 통해 다양한 이벤트 활용
+    + addEventListener를 이용한 함수 사용 시 함수명을 handle함수명으로 하는 듯
     + "javascript dom event mdn"를 검색하여 다양한 이벤트 찾아보기
     + 이벤트의 근원을 찾고 싶으면 MDN을 항상 검색해볼 것
     + Network가 끊겼을 때 작동하는 이벤트 Offline
