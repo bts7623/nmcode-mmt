@@ -203,5 +203,5 @@ create momentom project with Vanilla JS
   ```javascript
       prompt("Ask somthing"); //text를 입력할 수 있는 팝업 발생
   ``` 
-  - 
+  - 그냥 if, else, and, or
   
