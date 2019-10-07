@@ -251,7 +251,7 @@ create momentom project with Vanilla JS
   - 해당 class 위에 마우스 커서를 두면 포인터로 바뀌도록 하는 명령
   ```css
     .btn {
-    cursor: pointer;
+      cursor: pointer;
     }
   ```
   - JS로 className을 바꾸는 것은 기존 Class를 고려하지 않고 강제로 바꾼다.
@@ -259,3 +259,63 @@ create momentom project with Vanilla JS
     + ClassName을 바꾸는 것은 모든 Class를 없애고 바꾸기 때문에 ClassList의 Method를 사용해야함
     + ClossList Method에는 add, remove 등 특정 class를 제어할 수 있다.
   - classList Method: https://developer.mozilla.org/ko/docs/Web/API/Element/classList
+  - 1차 if, else로 구현
+    + JS
+    ```javascript
+        const title = document.querySelector("#title");
+
+        const CLICKED_CLASS = "clicked";
+  
+        function handleClick(){
+        //const currentClass = title.className;
+        const hasClass = title.classList.contains(CLICKED_CLASS); //다수의 className을 갖고 있을 때, 해당 클래스의 포함유무를 true, false return
+        console.log(hasClass);
+        //if (currentClass !== CLICKED_CLASS){
+        if (!hasClass){
+            //title.className = CLICKED_CLASS; //모든 클래스를 날리고 하나의 클래스만 남김
+            title.classList.add(CLICKED_CLASS); //className에 CLICKED_CLASS 하나만 추가
+        } else {
+            //title.className = ""; //모든 클래스를 날림
+            title.classList.remove(CLICKED_CLASS); //CLICKED_CLASS 하나만 지움
+        }
+    }
+    
+    function init() { //초기화 함수
+        title.addEventListener("click", handleClick); //event를 등록하는 방식, 다중 중복 등록이 가능
+        //title.addEventListener("click", handleClick); //"click" 부분에는 다양한 동작들을 넣을 수 있음. 더블클릭, 마우스오버 등
+    }
+    
+    init();
+    ```
+    + CSS
+    ```CSS
+      body{
+        background-color: #ecf0f1;
+      }
+      
+      .btn {
+          cursor: pointer;
+      }
+      
+      h1{
+          color: #34495e;
+      }
+      
+      .clicked{
+          color: #3498db;
+      }
+    ```
+    + HTML
+    ```html
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Something</title>
+          <link rel="stylesheet" href="index.css" />
+        </head>
+        <body>
+          <h1 id="title" class="btn">This work!</h1>
+          <script src="index.js"></script>
+        </body>
+      </html>
+    ```
