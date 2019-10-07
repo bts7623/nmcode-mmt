@@ -20,7 +20,7 @@ create momentom project with Vanilla JS
 #### 2019.09.29 : #2.3
 #### 2019.09.30 : #2.4
 #### 2019.10.04 : #2.5
-#### 2019.10.07 : 
+#### 2019.10.07 : #2.6 ~ 
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -207,3 +207,7 @@ create momentom project with Vanilla JS
   - 그냥 if, else, and, or
   
 - #2.6
+  - https://flatuicolors.com/   → 색깔 코드를 얻을 수 있는 페이지
+  - 기본컬러를 정할 때 변수를 대문자와 언더바로 선언 const BASE_COLOR
+  - init 함수를 통해 해당 페이지를 초기화함
+  - 
