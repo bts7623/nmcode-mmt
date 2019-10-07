@@ -222,3 +222,27 @@ create momentom project with Vanilla JS
     
     window.addEventListener("offline", handleOffline); //네트워크 연결이 끊겼을 때 handleOffline 함수 작동
     ```
+  - 2.6 JS 코드
+  ```javascript
+  const title = document.querySelector("#title");
+
+  const BASE_COLOR = "rgb(52, 73, 94)"; //#34495e를 JS가 rgb로 표기해줌
+  const OTHER_COLOR = "#7f8c8d";
+  
+  function handleClick() {
+      const currentColor = title.style.color;
+      if(currentColor === BASE_COLOR){
+          title.style.color = OTHER_COLOR;
+      }else{
+          title.style.color = BASE_COLOR;
+      }
+  }
+  
+  function init() { //초기화 함수
+      title.style.color = BASE_COLOR;
+      title.addEventListener("mouseenter", handleClick); //event를 등록하는 방식, 다중 중복 등록이 가능
+      //title.addEventListener("click", handleClick); //"click" 부분에는 다양한 동작들을 넣을 수 있음. 더블클릭, 마우스오버 등
+  }
+  
+  init();
+  ```
