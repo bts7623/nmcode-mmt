@@ -269,7 +269,6 @@ create momentom project with Vanilla JS
         function handleClick(){
         //const currentClass = title.className;
         const hasClass = title.classList.contains(CLICKED_CLASS); //다수의 className을 갖고 있을 때, 해당 클래스의 포함유무를 true, false return
-        console.log(hasClass);
         //if (currentClass !== CLICKED_CLASS){
         if (!hasClass){
             //title.className = CLICKED_CLASS; //모든 클래스를 날리고 하나의 클래스만 남김
@@ -318,4 +317,21 @@ create momentom project with Vanilla JS
           <script src="index.js"></script>
         </body>
       </html>
+    ```
+  - 위 작업을 title.classList.toggle 하나로 해결 가능
+    ```javascript
+       //hasClass로 true, false를 return 받아 if, else로 구현
+       function handleClick(){
+           const hasClass = title.classList.contains(CLICKED_CLASS);
+           if (!hasClass){
+               title.classList.add(CLICKED_CLASS); //className에 CLICKED_CLASS 하나만 추가
+           } else {
+               title.classList.remove(CLICKED_CLASS); //CLICKED_CLASS 하나만 지움
+           }
+       }
+       
+       //toggle 
+       function handleClick(){
+          title.classList.toggle(CLICKED_CLASS);
+       }
     ```
