@@ -20,7 +20,7 @@ create momentom project with Vanilla JS
 #### 2019.09.29 : #2.3
 #### 2019.09.30 : #2.4
 #### 2019.10.04 : #2.5
-#### 2019.10.07 : #2.6 ~ 
+#### 2019.10.07 : #2.6 ~ #2.7
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -246,3 +246,16 @@ create momentom project with Vanilla JS
   
   init();
   ```
+
+-#2.7
+  - 해당 class 위에 마우스 커서를 두면 포인터로 바뀌도록 하는 명령
+  ```css
+    .btn {
+    cursor: pointer;
+    }
+  ```
+  - JS로 className을 바꾸는 것은 기존 Class를 고려하지 않고 강제로 바꾼다.
+  - Element class name MDN 검색
+    + ClassName을 바꾸는 것은 모든 Class를 없애고 바꾸기 때문에 ClassList의 Method를 사용해야함
+    + ClossList Method에는 add, remove 등 특정 class를 제어할 수 있다.
+  - classList Method: https://developer.mozilla.org/ko/docs/Web/API/Element/classList
