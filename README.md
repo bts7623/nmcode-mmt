@@ -330,8 +330,10 @@ create momentom project with Vanilla JS
            }
        }
        
-       //toggle 
+       //toggle로 구현
        function handleClick(){
           title.classList.toggle(CLICKED_CLASS);
        }
     ```
+    
+    
