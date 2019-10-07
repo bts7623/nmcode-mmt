@@ -197,7 +197,7 @@ create momentom project with Vanilla JS
 
     title.addEventListener("click", handleClick);
   ```
-
+  
 - #2.5
   - 아주 오래된 스크립트로 prompt가 있음. (현재는 거의 쓰지 않지만 작동은 함)
   - 입력 받은 text를 변수로 넣어줄 수 있지만 지금은 거의 안씀
@@ -210,4 +210,14 @@ create momentom project with Vanilla JS
   - https://flatuicolors.com/   → 색깔 코드를 얻을 수 있는 페이지
   - 기본컬러를 정할 때 변수를 대문자와 언더바로 선언 const BASE_COLOR
   - init 함수를 통해 해당 페이지를 초기화함
-  - 
+  - addEventListener를 통해 다양한 이벤트 활용
+    + "javascript dom event mdn"를 검색하여 다양한 이벤트 찾아보기
+    + 이벤트의 근원을 찾고 싶으면 MDN을 항상 검색해볼 것
+    + Network가 끊겼을 때 작동하는 이벤트 Offline
+    ```javascript
+    function handleOffline(){
+      console.log("Network Offline"); //Network Offline log 찍음
+    }
+    
+    window.addEventListener("offline", handleOffline); //네트워크 연결이 끊겼을 때 handleOffline 함수 작동
+    ```
