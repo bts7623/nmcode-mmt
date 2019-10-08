@@ -21,7 +21,7 @@ create momentom project with Vanilla JS
 #### 2019.09.30 : #2.4
 #### 2019.10.04 : #2.5
 #### 2019.10.07 : #2.6 ~ #2.7
-#### 2019.10.08 : 
+#### 2019.10.08 : #3.1 ~
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -382,4 +382,33 @@ create momentom project with Vanilla JS
         }
         
         init();
+  ```
+  
+-#3.2
+  - setInterval(fn, time);
+    - 특정 함수 fn을 정해진 시간 time마다 반복 시키는 함수, 굉장히 간단하고 편리함
+    - 해당 함수를 통해 getTime을 1초마다 실행시킴
+  - 시분초가 10보다 작을 때 0~9로 뜨기 때문에 앞에 0을 붙여 00~09로 뜨게 해줘야함
+    - ternary operatioin(삼항연산자)을 이용하여 추가
+  ```javascript
+    const clockContainer = document.querySelector(".js-clock"), //document의 자식에서 찾음, ','로 2개의 constant를 정의
+    clockTitle = clockContainer.querySelector("h1"); //clockContainer의 자식에서 찾음(div 하위)
+
+    function getTime(){
+        const date = new Date();
+        const minutes = date.getMinutes();
+        const hours = date.getHours();
+        const seconds = date.getSeconds();
+        clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+                                  minutes < 10 ? `0${minutes}` : minutes}:${
+                                  seconds < 10 ? `0${seconds}` : seconds}`; // Date객체에서 시분초를 불러와 clockTitle h1에 넣어준다.
+                                                                            //ternary operator(삼항연산자)를 활용하여 10보다 작을 때 앞에 0을 넣어줌
+    }
+    
+    function init(){
+        getTime(); // init 함수를 통해 페이지 초기화 시 getTime 함수를 실행한다.
+        setInterval(getTime, 1000);
+    }
+    
+    init();
   ```
