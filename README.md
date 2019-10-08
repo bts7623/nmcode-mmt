@@ -353,4 +353,33 @@ create momentom project with Vanilla JS
        }
     ```
     
-    
+-#3.1 (제작)
+  - F12 개발자모드 콘솔에서 date 확인
+    ```javascript
+      const date = new Date() //undefined > 선언
+      date //Tue Oct 08 2019 09:34:43 GMT+0900 (한국 표준시) > 해당 date 정보 표기
+      date.getDay() //2 > new Date() 기준 요일인 화요일을 숫자로 표기 (1부터 월요일)
+      date.getDate() //8 > new Date() 기준 날짜 표기
+      date.getHours() // 9 > new Date() 기준 시간 표기
+      date.getMinutes() // 34 > new Date() 기준 분 표기
+    ```
+    - 다시 date를 초기화시키는 방법을 모르겠음
+  - 모든 것은 나눠서 한다. function init(){} init();을 먼저 해놓고 필요한 const를 정의하고 필요한 function을 정의하고 init()에 넣고
+  ```javascript
+        const clockContainer = document.querySelector(".js-clock"), //document의 자식에서 찾음, ','로 2개의 constant를 정의
+          clockTitle = clockContainer.querySelector("h1"); //clockContainer의 자식에서 찾음(div 하위)
+      
+        function getTime(){
+            const date = new Date();
+            const minutes = date.getMinutes();
+            const hours = date.getHours();
+            const seconds = date.getSeconds();
+            clockTitle.innerText = `${hours}:${minutes}:${seconds}`; // Date객체에서 시분초를 불러와 clockTitle h1에 넣어준다.
+        }
+        
+        function init(){
+            getTime(); // init 함수를 통해 페이지 초기화 시 getTime 함수를 실행한다.
+        }
+        
+        init();
+  ```
