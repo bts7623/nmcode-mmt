@@ -21,6 +21,23 @@ create momentom project with Vanilla JS
 #### 2019.09.30 : #2.4
 #### 2019.10.04 : #2.5
 #### 2019.10.07 : #2.6 ~ #2.7
+#### 2019.10.08 : 
+
+# JS
+- init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
+- querySelector()
+  - html에서 해당 요소에 접근
+  - #title, .title, #title .title의 식으로 해당 요소의 id와 class로 접근
+  - 딱 하나의 요소에만 접근이 가능하며 조건 중복 시 가장 위에 있는 첫 요소에 접근
+- querySelectorAll()
+  - querySelector()와 같지만 하나가 아닌 조건이 중복된 여러 요소를 모두 받음
+  - nodeList로 받기 때문에 for, foreach문을 사용해야 함
+  - ','를 이용해서 여러요소를 한번에 가져올 수 있음  
+- addEventListner()
+  - document 내 특정 요소에 event를 등록할 때 사용
+  - addEventListner("click", handleClick)등으로 행동과 함수를 연결해둠
+  - 해당 함수 handleClick을 통해 독립성을 높여 유지보수를 높일 수 있다.
+  - querySelectorAll()를 통해 같은 요소를 한번에 받아(ex_button) init()에서 addEventListner()로 이벤트를 넣어주면 추후 새로운 버튼을 추가해도 별도의 작업 없이 효과를 추가해줄 수 있다.
 
 # Concept
 #### #0 Introduction : 기본 인트로
