@@ -22,6 +22,7 @@ create momentom project with Vanilla JS
 #### 2019.10.04 : #2.5
 #### 2019.10.07 : #2.6 ~ #2.7
 #### 2019.10.08 : #3.1 ~ #3.2
+#### 2019.10.11 : #3.3 ~ 
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -412,3 +413,12 @@ create momentom project with Vanilla JS
     
     init();
   ```
+
+-#3.3
+  - localStorage에 데이터를 저장하여 웹에서 뿌릴 수 있도록 한다.
+  - 개발자모드>Application>왼쪽 하단부 Storage에 Local Storage를 비롯한 다양한 저장소들이 있다.
+    + 이를 통해 데이터를 저장할 수 있고, 이는 새로고침을 해도 사라지지 않고 저장되어 있다.
+    ```javascript
+      localStorage.setItem("nico", false) //Key, Value 저장 가능
+    ```
+  
