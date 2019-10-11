@@ -420,5 +420,6 @@ create momentom project with Vanilla JS
     + 이를 통해 데이터를 저장할 수 있고, 이는 새로고침을 해도 사라지지 않고 저장되어 있다.
     ```javascript
       localStorage.setItem("nico", false) //Key, Value 저장 가능
+      localStorage.getItem("nico") // false 출력, 개발자>Appl>local Stor 가서 데이터 값 바꾸면 바뀜
     ```
   
