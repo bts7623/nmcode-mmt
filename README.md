@@ -22,7 +22,8 @@ create momentom project with Vanilla JS
 #### 2019.10.04 : #2.5
 #### 2019.10.07 : #2.6 ~ #2.7
 #### 2019.10.08 : #3.1 ~ #3.2
-#### 2019.10.11 : #3.3 ~ 
+#### 2019.10.11 : #3.3
+#### 2019.10.14 : #3.4
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -39,6 +40,22 @@ create momentom project with Vanilla JS
   - addEventListner("click", handleClick)등으로 행동과 함수를 연결해둠
   - 해당 함수 handleClick을 통해 독립성을 높여 유지보수를 높일 수 있다.
   - querySelectorAll()를 통해 같은 요소를 한번에 받아(ex_button) init()에서 addEventListner()로 이벤트를 넣어주면 추후 새로운 버튼을 추가해도 별도의 작업 없이 효과를 추가해줄 수 있다.
+- localStorage.setItem, getItem을 통해 사용자 PC에 데이터를 저장할 수 있다.
+  - localStorage.setItem(key, value);
+- 독립성, 유지보수성
+  - 기능별로 js를 만든다.
+  - js 내에서도 작은 function들을 하나하나 분리한다.
+    - 작은 function 3개를 1개의 function에서 실행
+  - function에서 사용하는 요소와 변수명은 따로 최상단에 선언해둠
+    ```javascript
+    const form = document.querySelector(".js-form"), 
+      input = form.querySelector("input"),        
+      greeting = document.querySelector(".js-greetings");
+
+    const USER_LS = "currentUser",
+      SHOWING_CN = "showing";
+    ```
+ 
 
 # Concept
 #### #0 Introduction : 기본 인트로
@@ -422,4 +439,37 @@ create momentom project with Vanilla JS
       localStorage.setItem("nico", false) //Key, Value 저장 가능
       localStorage.getItem("nico") // false 출력, 개발자>Appl>local Stor 가서 데이터 값 바꾸면 바뀜
     ```
-  
+  - greetings(인사말) js를 생성하여 localStorage에 저장되어 있는 이름을 뿌려준다.
+    - localStorage 안에 currentUser 데이터가 있으면 loadName()을 통해 paintGreeting()을 실행하여 인사말 출력
+    ```javascript
+    //gretting.js
+    const form = document.querySelector(".js-form"), //querySelector class, id, tag 등으로 element 값 가져옴. 조건 중복 가능.
+    input = form.querySelector("input"),         //단, 가장 첫번째의 1개의 요소만 가져옴.
+    greeting = document.querySelector(".js-greetings");
+
+    const USER_LS = "currentUser",
+        SHOWING_CN = "showing";
+    
+    function paintGreeting(text) {
+        form.classList.remove(SHOWING_CN);
+        greeting.classList.add(SHOWING_CN);
+        greeting.innerHTML = `Hello ${text}`;
+    }
+    
+    function loadName() {
+        const currentUser = localStorage.getItem(USER_LS);
+        if (currentUser === null) {
+    
+        } else {
+            paintGreeting(currentUser);
+        }
+    }
+    
+    function init() {
+        loadName();
+    }
+    
+    init();
+    ```
+    
+    
