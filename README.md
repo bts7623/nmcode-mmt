@@ -582,5 +582,4 @@ create momentom project with Vanilla JS
     ```
     - createElement로 <tag>를 생성하고 appendChild로 자식 요소로 추가한다.
   
-  ㅇ
-      
+-#3.6
