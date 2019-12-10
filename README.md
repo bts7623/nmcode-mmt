@@ -24,7 +24,8 @@ create momentom project with Vanilla JS
 #### 2019.10.08 : #3.1 ~ #3.2
 #### 2019.10.11 : #3.3
 #### 2019.10.14 : #3.4
-#### 2019.10.15 : #3.5 ~
+#### 2019.10.15 : #3.5
+#### 2019.12.10 : #3.6
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -583,3 +584,6 @@ create momentom project with Vanilla JS
     - createElement로 <tag>를 생성하고 appendChild로 자식 요소로 추가한다.
   
 -#3.6
+  - TodoList data를 localStorage에 저장하는 함수를 만들어 저장한다.
+  - localStorage에 데이터는 String type만 저장할 수 있다.
+    - JS의 Array를 담을 경우 String이 아니기 때문에 Object로 표기한다.
