@@ -591,3 +591,6 @@ create momentom project with Vanilla JS
   - JSON(JavaScript Object Notation / 자바스크립트 오브젝트 표기법)
     - data전달할 때, JS가 그걸 다룰 수 있도록 Object로 바꿔주는 기능
     - 반대로 Obeject를 String으로 변환해주기도 하고 String을 Object로 바꿔주기도 함
+  - localStorage에 담겨있는 데이터를 화면에 뿌려줌
+    - JSON.parse()를 통해 String을 다시 JSON으로 바꿔줌
+    - Array.forEach 기능을 이요해서 Array각각의 항을 매개변수로 받아 text value를 paintToDo해주어 화면에 뿌려줌
