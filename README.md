@@ -593,7 +593,7 @@ create momentom project with Vanilla JS
     - 반대로 Obeject를 String으로 변환해주기도 하고 String을 Object로 바꿔주기도 함
   - localStorage에 담겨있는 데이터를 화면에 뿌려줌
     - JSON.parse()를 통해 String을 다시 JSON으로 바꿔줌
-    - Array.forEach 기능을 이요해서 Array각각의 항을 매개변수로 받아 text value를 paintToDo해주어 화면에 뿌려줌
+    - Array.forEach 기능을 이용해서 Array각각의 항을 매개변수로 받아 text value를 paintToDo해주어 화면에 뿌려줌
     
 -#3.7
   - X박스 눌러서 TodoList 삭제하기
@@ -602,3 +602,12 @@ create momentom project with Vanilla JS
     - console.log(event.target)을 통해 어떤 버튼이 눌렸는지를 알 수 있고
     - console.dir(event.target)을 통해 해당 버튼에 연관된 데이터를 알 수 있고
     - console.log(event.target.parentNode)를 통해 해당 버튼의 부모 태그인 li의 정보를 알 수 있다.
+  - Node.removeChild() 함수를 통해 자식 tag를 삭제할 수 있다.
+    - event.target.parentNode 를 통해 해당 li tag를 저장하고 removeChild를 실행하면 html의 해당 태그를 지운다.
+  - Array.filter(fn) 실행 시 Array의 모든 값에 fn을 실행하며 return true, false를 한다.
+    - 이 때 return true인 데이터만을 가지고 새로 Array를 구성한다.
+    - 따라서 삭제한 li.id를 비교하여 다른 경우의 데이터로 Array를 새로 받는다.
+      - 이 때, fn에 매개변수로 받은 li.id는 숫자고 parentNode로 받은 li.id는 문자이기 때문에 parseInt(li.id)로 type을 맞춘 뒤 비교해야한다.
+    - 그 뒤 기존의 toDos에 새로운 Array인 cleanToDos를 넣어준다.
+      - 지금까지 toDos Array는 const type이었는데 데이터를 변경하기위해 let type으로 바꿔준다.
+    - 그리고 기존의 saveToDos function을 실행하면 localStorage에 저장한다.
