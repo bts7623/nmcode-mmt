@@ -587,3 +587,7 @@ create momentom project with Vanilla JS
   - TodoList data를 localStorage에 저장하는 함수를 만들어 저장한다.
   - localStorage에 데이터는 String type만 저장할 수 있다.
     - JS의 Array를 담을 경우 String이 아니기 때문에 Object로 표기한다.
+    - JSON.stringify(Object)를 통해 JS Object를 String으로 바꿔준다.
+  - JSON(JavaScript Object Notation / 자바스크립트 오브젝트 표기법)
+    - data전달할 때, JS가 그걸 다룰 수 있도록 Object로 바꿔주는 기능
+    - 반대로 Obeject를 String으로 변환해주기도 하고 String을 Object로 바꿔주기도 함
