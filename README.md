@@ -594,3 +594,11 @@ create momentom project with Vanilla JS
   - localStorage에 담겨있는 데이터를 화면에 뿌려줌
     - JSON.parse()를 통해 String을 다시 JSON으로 바꿔줌
     - Array.forEach 기능을 이요해서 Array각각의 항을 매개변수로 받아 text value를 paintToDo해주어 화면에 뿌려줌
+    
+-#3.7
+  - X박스 눌러서 TodoList 삭제하기
+  - delBtn.addEventListener("click", deleteToDo)를 통해 delBtn에 클릭 이벤트 실행 시 deleteToDo function이 실행되도록 설정
+  - deleteToDo function에서 event를 매개변수로 받는다.
+    - console.log(event.target)을 통해 어떤 버튼이 눌렸는지를 알 수 있고
+    - console.dir(event.target)을 통해 해당 버튼에 연관된 데이터를 알 수 있고
+    - console.log(event.target.parentNode)를 통해 해당 버튼의 부모 태그인 li의 정보를 알 수 있다.
