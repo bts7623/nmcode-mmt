@@ -26,6 +26,7 @@ create momentom project with Vanilla JS
 #### 2019.10.14 : #3.4
 #### 2019.10.15 : #3.5
 #### 2019.12.10 : #3.6 ~ #3.7
+#### 2019.12.15 : #3.8
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -611,3 +612,42 @@ create momentom project with Vanilla JS
     - 그 뒤 기존의 toDos에 새로운 Array인 cleanToDos를 넣어준다.
       - 지금까지 toDos Array는 const type이었는데 데이터를 변경하기위해 let type으로 바꿔준다.
     - 그리고 기존의 saveToDos function을 실행하면 localStorage에 저장한다.
+
+-#3.8
+  - Image Background 배경 이미지 바꾸기
+  - Math함수
+    - Math.random()
+      - Math.random() * 5 : 0 ~ 4까지 랜덤
+    - Math.ceil(), Math.floor() //ceiling: 천상, floor: 바닥
+      - ceil은 소수점 아래를 없애고 다 반올림
+      - floor는 소수점 아래를 없애기만 함(반내림)
+    - Math.floor(Math.random() * 5)를 통해 5개지의 숫자를 얻을 수 있음
+  - new Image()
+    - image 객체 생성 후 .src에 image 경로를 설정해준다.
+    - .classList.add("bgImage")하여 class명을 추가 해줌
+    - body.appendChild(image);로 html body에 image를 추가한다.
+      - body : document.querySelector("body");
+      - appendChild와 prepend차이 알아보기
+    - css에 .bgImage에 맞는 설정을 해준다.
+      - z-index: -1; 설정을 통해 image를 맨 아래로 보냄
+      - keyframe을 통해 fadeIn animation을 적용
+      ```css
+      @keyframes fadeIn{
+          from {
+              opacity: 0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+      
+      .bgImage{
+          position: absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          z-index: -1; /*이미지를 맨 아래로 위치*/
+          animation: fadeIn 0.5s linear;
+      }
+      ```
