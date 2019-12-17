@@ -27,6 +27,7 @@ create momentom project with Vanilla JS
 #### 2019.10.15 : #3.5
 #### 2019.12.10 : #3.6 ~ #3.7
 #### 2019.12.15 : #3.8
+#### 2019.12.17 : #3.9
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -651,3 +652,15 @@ create momentom project with Vanilla JS
           animation: fadeIn 0.5s linear;
       }
       ```
+
+-#3.9
+  - 날씨정보 불러오기
+  - weather.js 추가(html에도 추가)
+  - localStorage에서 위치 값 있을 시 날씨 정보를 불러오고 위치 값 없을 시 위치 값부터 불러온다.
+    - 위치 값 : function askForCoords()
+      - navigator.geolocation.getCurrentPostion(성공 시 위치 값 return, 실패 시 error 함수 실행);
+      - 실행 시 위치 정보 수집 동의를 구하며 수락 시 성공, 거절 시 실패로 진행된다.
+        - 성공: function handleGeoSucces(position) / 위치 값을 매개변수로 return 받을 수 있다.
+          - 위도, 경도를 담아 localStorage에 
+        - 실패: function handleGeoError() / 실패 시 어떤 동작을 할지 함수 설정한다.
+  - 다음 강의에서 https://openweathermap.org/ API활용하여 날씨 받아올 예정
