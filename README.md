@@ -28,6 +28,7 @@ create momentom project with Vanilla JS
 #### 2019.12.10 : #3.6 ~ #3.7
 #### 2019.12.15 : #3.8
 #### 2019.12.17 : #3.9
+#### 2019.12.19 : #3.10
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -664,3 +665,20 @@ create momentom project with Vanilla JS
           - 위도, 경도를 담아 localStorage에 
         - 실패: function handleGeoError() / 실패 시 어떤 동작을 할지 함수 설정한다.
   - 다음 강의에서 https://openweathermap.org/ API활용하여 날씨 받아올 예정
+  
+-#3.10
+  - Chrome extension을 깔면 배열 값을 이쁘게 볼 수 잇음(별도 설명은 없었음)
+  - 날씨 정보를 받아오는 getWeather function을 만들어준다.
+    - JS에서는 fetch를 통해 API 온라인 연동을 할 수 있다.
+    - https://openweathermap.org/current
+    - https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22
+  - 위 링크를 통해 API사용 예시를 보고 해당 링크를 fatch에 넣는다.
+    - 이 때 억음부호를 사용해준다. 위도, 경도는 ${lat}, ${lng}, ${API_KEY}식으로 넣어준다.
+  - API연동 후 chrome 개발자모드 Network로 가면 연동을 확인할 수 있다.
+    - Headers 탭에서 위도, 경도, API_KEY 값이 들어간 Request URL을 확인 할 수 있다.
+      - Request URL 복사해서 들어가보면 return data 확인 가능
+    - Response 탭에서 return 받은 데이터를 확인할 수 있다.
+  - https://openweathermap.org/current > Units format 으로 가서 데이터가 어떤식으로 표현되고 있는지 확인한다.
+    - Units format 부분 가기 > 기온을 celsius(섭씨) 단위로 쓰려면 units=metric을 사용
+      - https://samples.openweathermap.org/data/2.5/find?q=London&`units=metric`&appid=b6907d289e10d714a6e88b30761fae22
+      
