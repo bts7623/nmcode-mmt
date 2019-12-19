@@ -1,5 +1,14 @@
-const API_KET = "d989768f5e32b4b9abe75818bf194458";
+const API_KEY = "d989768f5e32b4b9abe75818bf194458";
 const COORDS = "coords";
+
+function getWeather(lat, lng){ //위도, 경도
+    // API 주소를 등록하여 정보를 받아오는 법, 샘플페이지 url처럼 뒤에 appid를 추가해준다.
+
+    fetch(//units=metric을 해줘야 temp를 섭씨로 받아온다.
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`
+    );
+    
+}
 
 function saveCoords(coordsObj){
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
@@ -14,6 +23,7 @@ function handleGeoSucces(position){
         longitude //longitude = longitude;
     }
     saveCoords(coordsObj);
+    getWeather(latitude, longitude);
 }
 
 function handleGeoError(){
@@ -32,6 +42,8 @@ function loadCoords(){
         askForCoords(); // 위치 정보가 null이면 위치 정보를 요청
     } else {
         // getWeather 위치 정보가 있으면 날씨정보 호출
+        const parseCoords = JSON.parse(loadedCoords);
+        getWeather(parseCoords.latitude, parseCoords.longitude);
     }
 }
 
