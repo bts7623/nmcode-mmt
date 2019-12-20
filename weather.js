@@ -1,3 +1,5 @@
+const weather = document.querySelector(".js-weather"); //날씨 정보를 뿌려줄 span
+
 const API_KEY = "d989768f5e32b4b9abe75818bf194458";
 const COORDS = "coords";
 
@@ -6,7 +8,15 @@ function getWeather(lat, lng){ //위도, 경도
 
     fetch(//units=metric을 해줘야 temp를 섭씨로 받아온다.
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`
-    );
+    ).then(function(response){
+        //API 데이터가 다 받아와질 때까지 기다림
+        //이 때 response 데이터는 network 데이터이기 때문에 이 중 json데이터를 받아와야함
+       return response.json()
+    }).then(function(json){//이것도 데이터 받아올 때까지 기다려야지 정상적으로 json데이터를 뿌려줌
+        const temperature = json.main.temp;
+        const place = json.name;
+        weather.innerText = `${temperature} @ ${place}`;
+    });
     
 }
 
