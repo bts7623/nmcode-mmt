@@ -28,7 +28,8 @@ create momentom project with Vanilla JS
 #### 2019.12.10 : #3.6 ~ #3.7
 #### 2019.12.15 : #3.8
 #### 2019.12.17 : #3.9
-#### 2019.12.19 : #3.10
+#### 2019.12.19 : #3.10-1
+#### 2019.12.20 : #3.10-2
 
 # JS
 - init() : 해당 페이지의 초기화 작업을 할 때 주로 사용하는 함수
@@ -680,5 +681,19 @@ create momentom project with Vanilla JS
     - Response 탭에서 return 받은 데이터를 확인할 수 있다.
   - https://openweathermap.org/current > Units format 으로 가서 데이터가 어떤식으로 표현되고 있는지 확인한다.
     - Units format 부분 가기 > 기온을 celsius(섭씨) 단위로 쓰려면 units=metric을 사용
-      - https://samples.openweathermap.org/data/2.5/find?q=London&`units=metric`&appid=b6907d289e10d714a6e88b30761fae22
-      
+      - https://samples.openweathermap.org/data/2.5/find?q=London&units=metric&appid=b6907d289e10d714a6e88b30761fae22
+  - fetch문 뒤에 .then(funciton(json){}을 넣으면 모든 데이터가 들어올 때까지 기다렸다가 함수를 실행한다.
+    - .then을 하지 않으면 데이터를 불러오기 전에 다음 함수가 실행돼서 오류가 발생함
+    - fetch문의 데이터는 network response데이터이기 때문에 한번 더 json을 받아오는 함수를 써줘야한다.
+    ```javascript
+            fetch(//units=metric을 해줘야 temp를 섭씨로 받아온다.
+               `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${API_KEY}`
+            ).then(function(response){
+              //API 데이터가 다 받아와질 때까지 기다림
+              //이 때 response 데이터는 network 데이터이기 때문에 이 중 json데이터를 받아와야함
+               return response.json()
+            }).then(function(json){//이것도 데이터 받아올 때까지 기다려야지 정상적으로 json데이터를 뿌려줌
+                console.log(json);
+            });
+    ```
+  - json 데이터에서 온도, 위치를 받아 화면에 뿌려준다.
