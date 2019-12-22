@@ -19,10 +19,36 @@ ES5, ES6 등 library별 버전이 있다.
 
 ---
 
-### Project
+### Structure of sourcecode
+- HTML, CSS, JS
+- HTML
+  + App의 기본적인 틀로 CSS, JS추가 하는 포맷정도 인지하면 될듯
+  + head
+    * title을 넣어주고 하위에 CSS link를 넣어준다.([링크](https://technote.kr/187))
+  + body
+    * App의 핵심 기능 구현
+      = 시간 표기: div class="js-clock"
+      = 이름 입력 폼: form class="js-form form"
+      = 저장된 이름을 포함한 문구 표기: h4 class="js-greetings greetings"
+      = Todolist 입력 폼: form class="js-toDoForm"
+      = 입력된 Todolist 표기: ul class="js-toDoList"
+      = 날씨정보 표기: span class="js-weather"
+    * 하위에 JS 추가([링크](https://technote.kr/187))
+- CSS
+  + 필요에따라 각각의 요소에 CSS추가
+- JS
+  + 세부 기능 하나하나 쪼개서 구현하는 것이 핵심
+  + 시간 표기: clock.js
+  + 이름 포함 문구 표기: gretting.js
+  + TodoList 표기: todo.js
+  + 배경화면 전환: bg.js
+  + 날씨정보 표기: weather.js
 
-- 
-
+### Program Flow
+- 각각의 기능 설계순서와 js 내부 function 구현 구조 익히기
+# 20191223 할일
+각각의 js들을 분석하면서 쓰이는 JS 기능들 아래에 정리하기
+  
 ---
 
 ### JavaScript
