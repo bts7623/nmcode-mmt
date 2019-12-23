@@ -48,15 +48,23 @@ ES5, ES6 등 library별 버전이 있다.
 - 각각의 기능 설계순서와 js 내부 function 구현 구조 익히기
 - 전체 Flow
 ```html  
-  시간표기하기 > 이름 받아 문구 표기하기 > todolist 받아 표기하기 > 배경 바꾸기 > 날씨표기
+  시간 표기하기 > 이름 받아 문구 표기하기 > todolist 받아 표기하기 > 배경 바꾸기 > 날씨표기
 ```
-- 시간표기하기
+- 세부 Flow
+```html
+  1. 시간 표기하기 > html에 표기할 자리 만들기 > 시간 받아오기 > 1초 씩 실행하기
+  2. 이름 받아 문구 표기하기 > 
+```
+
+### Program Flow Detail
+- 시간 표기하기
   + html에 시간이 들어갈 공간 만들고 "clock.js" 추가
   ```html
     <div class="js-clock">
       <h1>00:00</h1>
     </div>
-  ```
+  ```  
+
   + clock.js
     * Flow : getTime() > setInterval > init()
       = init 실행 시 시간을 불러와 화면에 뿌리고 이 작업을 1초에 한번씩 한다.
@@ -94,6 +102,24 @@ ES5, ES6 등 library별 버전이 있다.
 ---
 
 ### JavaScript
-- .querySelector
-
+- .querySelector : 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element를 반환
+  + 깊이 우선(depth-first) 전위(pre-order) 순회로 탐색하며 첫 번째 요소부터 자식 노드의 수 기준으로 순회
+  + document.querySelector(*selectors*);
+  + *selectors*종류 : ".class", "#id", "tag"
+    * 더 복잡하게도 가능
+    ```javascript
+      //user-panel, main class를 가진 div tag 안의 name이 login인 첫번째 input tag
+      //<div class="user-panel main">
+      //  <input type="text" name="login">
+      //</div>
+      document.querySelector("div.user-panel.main input[name=login]");
+    ```
+- setInterval(function(), time) : 특정 함수 일정 시간 반복
+  + 위에 사용되었듯 setInterval(getTime(), 1000)은 getTime 함수를 1초에 한번씩 실행한다.
+  + 해당 setInterval 함수를 변수에 담아 실행 후 clearInterval(setInterval)로 반복을 종료할 수 있다.
+  + typeof setInterval(fn, time) 실행 시 "number" type이 찍히며 console에 setInterval을 찍어보면 1씩 숫자가 증가한다.
+    = clearInterval 실행 시 setInterval에서 넘겨받은 숫자로 해당 반복을 종료하는 듯 하다.
+  + 비슷한 기능으로 setTimeout(fn, time)이 있으며, 해당 시간 지연 후 함수를 실행한다고 한다.
+  
+  
 ##### var, let, const([참고링크](https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d))
