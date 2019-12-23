@@ -102,7 +102,7 @@ ES5, ES6 등 library별 버전이 있다.
 ---
 
 ### JavaScript
-- .querySelector : 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element를 반환
+- .querySelector : 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element를 반환([상세보기](https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector))
   + 깊이 우선(depth-first) 전위(pre-order) 순회로 탐색하며 첫 번째 요소부터 자식 노드의 수 기준으로 순회
   + document.querySelector(*selectors*);
   + *selectors*종류 : ".class", "#id", "tag"
@@ -114,6 +114,20 @@ ES5, ES6 등 library별 버전이 있다.
       //</div>
       document.querySelector("div.user-panel.main input[name=login]");
     ```
+  + 해당 옵션의 모든 값을 가져오려면 querySelectorAll을 쓰면 된다.([상세보기](https://developer.mozilla.org/ko/docs/Web/API/Document/querySelectorAll))
+    * document.querySelectorAll("p"); > document 내 p tag를 다 가져온다.
+    * NodeList로 받아오며 NodeList는 Array가 아니다.
+      = 따라서 foreach 등으로 뿌려서 봐야하고, Array.form()을 통해 형변환도 가능하다.(오래된 브라우저 제외)
+    * Option
+      = class가 A 또는 B인 모든 div element 목록 받기 > 콤마(,)로 구분
+      ```javascript
+         document.querySelectorAll("div.A, div.B");
+      ```
+      = id가 "test"인 컨테이너 안에 있는 div tag가 부모인 highlighted class를 가진 p tag list
+      ```javascript
+         const container = document.querySelector("#test");
+         const list = container.querySelectorAll("div.highlighted > p");
+      ```
 - setInterval(function(), time) : 특정 함수 일정 시간 반복
   + 위에 사용되었듯 setInterval(getTime(), 1000)은 getTime 함수를 1초에 한번씩 실행한다.
   + 해당 setInterval 함수를 변수에 담아 실행 후 clearInterval(setInterval)로 반복을 종료할 수 있다.
