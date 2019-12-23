@@ -47,7 +47,8 @@ ES5, ES6 등 library별 버전이 있다.
 ### Program Flow
 - 각각의 기능 설계순서와 js 내부 function 구현 구조 익히기
 - 전체 Flow
-```html  시간표기하기 > 이름 받아 문구 표기하기 > todolist 받아 표기하기 > 배경 바꾸기 > 날씨표기
+```html  
+  시간표기하기 > 이름 받아 문구 표기하기 > todolist 받아 표기하기 > 배경 바꾸기 > 날씨표기
 ```
 - 시간표기하기
   + html에 시간이 들어갈 공간 만들고 "clock.js" 추가
