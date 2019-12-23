@@ -46,11 +46,53 @@ ES5, ES6 등 library별 버전이 있다.
 
 ### Program Flow
 - 각각의 기능 설계순서와 js 내부 function 구현 구조 익히기
-# 20191223 할일
-각각의 js들을 분석하면서 쓰이는 JS 기능들 아래에 정리하기
-  
+- 전체 Flow
+```html  시간표기하기 > 이름 받아 문구 표기하기 > todolist 받아 표기하기 > 배경 바꾸기 > 날씨표기
+```
+- 시간표기하기
+  + html에 시간이 들어갈 공간 만들고 "clock.js" 추가
+  ```html
+    <div class="js-clock">
+      <h1>00:00</h1>
+    </div>
+  ```
+  + clock.js
+    * Flow : getTime() > setInterval > init()
+      = init 실행 시 시간을 불러와 화면에 뿌리고 이 작업을 1초에 한번씩 한다.
+    * init(): 해당 js에서 실행할 실질적인 함수
+      = 현재 시간을 화면에 뿌려주는 getTime() function과 1초에 한번씩  getTime()을 실행하는 function을 넣는다.
+      ```javascript
+        function init(){
+          getTime();
+          setInterval(getTime, 1000);
+        }
+      ```
+    * 시간을 화면에 뿌려줄 h1 태그에 접근하는 경로를 변수에 담는다.
+      = 경로를 변수에 담아 편하게 함수에 활용하고 경로 변경 시에도 선언한 변수만 바꿔주면 된다.
+      ```javascript
+        //최상위 폴더인 document 하위에 있는 js-clock class를 가진 태그를 찾음
+        //js-clock을 class로 갖는 div 하위에 h1 태그를 찾음
+        const clockContainer = document.querySelector(".js-clock"),
+              clockTitle = clockContainter.querySelector("h1");
+      ```
+    * function getTime()
+      = Date Class를 할당 받아 시, 분, 초를 변수에 담고 h1 태그 경로에 innerText 해줌
+      = 이 때 0~9까지는 한자리 수로 표기되기 때문에 앞에 문자 '0'을 넣어줌
+      = 백틱(`) 안에 또 백틱(`)을 넣을 수 있는 것이 신기함.
+      ```javascript
+        function getTime(){
+          const date = new Date();
+          const minutes = date.getMinutes();
+          const hours = date.getHours();
+          const seconds = date.getSeconds();
+          clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+                                    minutes < 10 ? `0${minutes}` : minutes}:${
+                                    seconds < 10 ? `0${seconds}` : seconds}`;
+        }
+      ```
 ---
 
 ### JavaScript
+- .querySelector
 
 ##### var, let, const([참고링크](https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d))
