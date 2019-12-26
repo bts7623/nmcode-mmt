@@ -130,6 +130,9 @@ ES5, ES6 등 library별 버전이 있다.
         greeting.classList.add(SHOWING_CN);
       ```
       = greeting.innerHTML을 통해 이름을 입력 받아 text를 뿌려준다.
+    * localStorage.setItem(key, value), localStorage.getItem(key, value)
+      = key, value값을 local Storage에 저장하고, 불러온다.
+      = 쿠키 삭제 전까지 저장되어 있다.
 ---
 
 ### JavaScript
@@ -179,6 +182,9 @@ ES5, ES6 등 library별 버전이 있다.
   
 - innerText, innerHTML 차이
   + 둘 다 해당 태그에 글을 입력하는 것인데, innerHTML의 경우 tag 입력 시 tag를 html화 하여 출력한다.
-    = innerText(<h1>하하</h1>): <h1>하하</h1>
-    = innerHTML(<h1>하하</h1>): ##하하
+  ```javascript
+    innerText(<h1>하하</h1>): <h1>하하</h1> //text 그대로
+    innerHTML(<h1>하하</h1>): 하하 //굵게
+  ```
+
 ##### var, let, const([참고링크](https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d))
