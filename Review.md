@@ -133,6 +133,7 @@ ES5, ES6 등 library별 버전이 있다.
     * localStorage.setItem(key, value), localStorage.getItem(key, value)
       = key, value값을 local Storage에 저장하고, 불러온다.
       = 쿠키 삭제 전까지 저장되어 있다.
+    * 2019.12.27 addEventListener > preventDefault() 함수 정리하기
 ---
 
 ### JavaScript
