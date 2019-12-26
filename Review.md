@@ -53,7 +53,7 @@ ES5, ES6 등 library별 버전이 있다.
 - 세부 Flow
 ```html
   1. 시간 표기하기 > html에 표기할 자리 만들기 > 시간 받아오기 > 1초 씩 실행하기
-  2. 이름 받아 문구 표기하기 > 
+  2. 이름 받아 문구 표기하기 > html에 표기할 자리 만들기 > 
 ```
 
 ### Program Flow Detail
@@ -99,9 +99,42 @@ ES5, ES6 등 library별 버전이 있다.
                                     seconds < 10 ? `0${seconds}` : seconds}`;
         }
       ```
+- 이름 받아 문구 표기하기
+  + html에 자리 만들기(text 입력 폼, 입력받은 text를 뿌릴 h4 태그)
+    * js에서 접근하는 tag들은 js-form, js-greeting등으로 class를 부여한다.
+  ```html
+      <form class="js-form form">
+        <input type="text" placeholder="what is your name?" />
+      </form>
+      <h4 class="js-greetings greetings></h4>
+  ```
+  
+  + gretting.js
+    * Flow : init() > loadName() > askForName() > handleSubmit > paintGreeting(), saveName()
+                                 > paintGreeting()
+      = 이름이 있으면 화면에 뿌려주고, 없으면 입력 받아 local에 저장한다.
+      = 기능을 짤 때도, 데이터를 체크하고, 있으면 뿌리고, 없으면 받아 저장받는 것으로 설계한다.
+    * loadName()이 이 기능의 실질적인 함수이다.
+    * 역시나 모든 경로와 변수명은 const로 정의해둔다.
+    * paintGreeting()
+      = .classList : 해당 element에 class list를 받아온다.
+        - .classList.add(CLASS_NM) : 해당 element에 CLASS_NM 클래스를 추가한다.
+        - .classList.remove(CLASS_NM) : 해당 element에 CLASS_NM 클래스를 제거한다.
+      = 숨길 .js-form을 변수로 저장하고 이름 입력 시 showing class를 지운다.
+      = .js-greeting을 변수로 저장하고 이름 입력 시 showing class를 추가한다.
+      ```javascript
+        const form = document.querySelector(".js-form"),
+              greetirng = document.quertSelector(".js-greetings");
+        const SHOWING_CN = "showing";
+        form.classList.remove(SHOWING_CN);
+        greeting.classList.add(SHOWING_CN);
+      ```
+      = greeting.innerHTML을 통해 이름을 입력 받아 text를 뿌려준다.
 ---
 
 ### JavaScript
+- 최근 JS에서는 백틱으로 편하게 text를 입력할 수 있다.
+  + 별도의 (+)기호 없이 text를 죽 입력하면 되고, 변수는 ${변수명}으로 넣을 수 있다.
 - .querySelector : 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element를 반환([상세보기](https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector))
   + 깊이 우선(depth-first) 전위(pre-order) 순회로 탐색하며 첫 번째 요소부터 자식 노드의 수 기준으로 순회
   + document.querySelector(*selectors*);
@@ -135,5 +168,17 @@ ES5, ES6 등 library별 버전이 있다.
     = clearInterval 실행 시 setInterval에서 넘겨받은 숫자로 해당 반복을 종료하는 듯 하다.
   + 비슷한 기능으로 setTimeout(fn, time)이 있으며, 해당 시간 지연 후 함수를 실행한다고 한다.
   
+- .classList : 해당 element의 class들을 list로 받아온다.
+  + .remove, .add,  .toggle
+    = 해당 클래스를 지우고, 추가하고, 토글한다.
+    = 없는 class를 remove한다고 exception이 걸리진 않는다.
+    = toggle 시 제거하면 false, 추가하면 true를 반환한다.
+  + item(index): 해당 list의 index값을 넣어 데이터를 받는다.
+  + contains(String): 해당 class가 존재하는지 판별
+  + replace(old, new): 존재하는 class를 새로운 class로 교체
   
+- innerText, innerHTML 차이
+  + 둘 다 해당 태그에 글을 입력하는 것인데, innerHTML의 경우 tag 입력 시 tag를 html화 하여 출력한다.
+    = innerText(<h1>하하</h1>): <h1>하하</h1>
+    = innerHTML(<h1>하하</h1>): ##하하
 ##### var, let, const([참고링크](https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d))
