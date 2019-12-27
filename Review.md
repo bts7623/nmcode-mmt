@@ -134,6 +134,8 @@ ES5, ES6 등 library별 버전이 있다.
       = key, value값을 local Storage에 저장하고, 불러온다.
       = 쿠키 삭제 전까지 저장되어 있다.
     * 2019.12.27 addEventListener > preventDefault() 함수 정리하기
+    * localStorage에 데이터가 없을 시 askForName을 통해 입력폼을 제공하며 EnterKey Click 시 새로고침이 되지 않도록
+      form.addEventListener를 통해 event를 받아 event.preventDefault(); 실행 후 기능을 진행한다.
 ---
 
 ### JavaScript
@@ -187,5 +189,15 @@ ES5, ES6 등 library별 버전이 있다.
     innerText(<h1>하하</h1>): <h1>하하</h1> //text 그대로
     innerHTML(<h1>하하</h1>): 하하 //굵게
   ```
+  
+- EventTarget.addEventListener(type, Listener)
+  + 여기서는 간단하게 특정 행위([type](https://developer.mozilla.org/ko/docs/Web/Events))가 일어났을 때 Listener(fn)로 넘겨준다고 보면 된다.
+  + 특정 이벤트 발생 시 EventListener Interface나 JavaScript Function을 넣어 동작시킨다.
+  + Listener는 evenet 변수를 받을 수 있는데 이 것에 대한 활용은 천천히 알아보자.
+
+- Event.preventDefault
+  + addEventListener("submit", fn(event))를 통해 enter키로 submit이 작동했을 시 새로고침이 되지 않도록 할 때 사용했던 기능
+  + 이벤트를 취소할 수 있는 경우, 이벤트의 전파를 막지않고 그 이벤트를 취소한다.
+  + 취소불가능한 이벤트나, DOM을 통하 이벤트 전파는 막을 수 없으며 이런 상황에는 다른 fn이 있다.
 
 ##### var, let, const([참고링크](https://gist.github.com/LeoHeo/7c2a2a6dbcf80becaaa1e61e90091e5d))
