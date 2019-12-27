@@ -53,7 +53,8 @@ ES5, ES6 등 library별 버전이 있다.
 - 세부 Flow
 ```html
   1. 시간 표기하기 > html에 표기할 자리 만들기 > 시간 받아오기 > 1초 씩 실행하기
-  2. 이름 받아 문구 표기하기 > html에 표기할 자리 만들기 > 
+  2. 이름 받아 문구 표기하기 > html에 표기할 자리 만들기 > localStorage 확인 > 입력 받은 이름 저장 > 새로고침 시 화면에 뿌리기
+  3. todolist 받아 표기하기 > 
 ```
 
 ### Program Flow Detail
@@ -136,6 +137,12 @@ ES5, ES6 등 library별 버전이 있다.
     * 2019.12.27 addEventListener > preventDefault() 함수 정리하기
     * localStorage에 데이터가 없을 시 askForName을 통해 입력폼을 제공하며 EnterKey Click 시 새로고침이 되지 않도록
       form.addEventListener를 통해 event를 받아 event.preventDefault(); 실행 후 기능을 진행한다.
+      
+- todolist 받아 출력하기
+  + todo.js
+    * init() > loadToDos() > paintToDo() > saveToDos()
+             > toDoForm.addEventListener > handleSubmit > paintToDo() > saveToDos()
+    * loadToDos() 
 ---
 
 ### JavaScript
